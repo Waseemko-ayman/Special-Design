@@ -1,0 +1,220 @@
+/* Start Variable */
+:root {
+    --first-color: #d3d5da;
+    --seconde-color: #465b52;
+    --third-color: #f59e0b;
+    --forth-color: #088178;
+    --fifth-color: #222;
+    --white-color: white;
+    --main-transition: 0.3s;
+    --section-padding: 50px;
+    --section-padding: 50px;
+    --fa-style-family-classic: "Font Awesome 6 Free";
+    /* padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding); */
+}
+/* End Variable */
+
+/* Start Global Rules */
+* {
+    --webkit-box-sizing: border-box;
+    --moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.goto-up {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--black-color);
+    color: var(--white-color);
+    background-color: var(--forth-color);
+    font-size: 22px;
+    right: 50px;
+    bottom: 40px;
+    z-index: 500;
+    transition: var(--main-transition);
+}
+
+@media (max-width: 767px) {
+    .goto-up {
+        right: 20px;
+        bottom: 60px;
+    }
+}
+
+/* اعملت هاي علشان بدي اللون اللي ورا يملا الشاشة لكن الكونتنت اللي ورا تملا من الاول للاخر */
+.container {
+    /* كتبنا ال بادنك علشان الكلام في نسخة الموبايل ما يبلش من اول الشاشة */
+    padding-left: 15px;
+    padding-right: 15px;
+    /* علشان الكونتينر يمسك العناصر في النص */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small screens */
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+
+/* Start Component */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.align-flex {
+    display: flex;
+    align-items: center;
+}
+
+.justify-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.between-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--forth-color);
+    box-shadow: 0 0 5px var(--main-color) inset;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--first-color);
+    border-radius: 10px;
+}
+
+/* End Component */
+
+/******************************************************************************************************/
+/* Start Landing */
+.landing {
+    min-height: 100vh;
+    background-image: url("../Images/landing\ \(1\).jpg");
+    background-size: cover;
+    position: relative;
+    transition: var(--main-transition);
+}
+
+.landing .container {
+    color: var(--white-color);
+}
+
+.landing .overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.landing .header-area {
+    width: 100%;
+    padding: 10px;
+}
+
+.landing .logo {
+    width: 300px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.landing .links {
+    padding: 0;
+    text-align: right;
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    z-index: 2;
+}
+
+.landing .links li a {
+    color: var(--white-color);
+    transition: var(--main-transition);
+}
+
+.landing .links li a:hover,
+.landing .links li a.active {
+    color: var(--third-color);
+}
+
+.landing .introduction-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+}
+
+.landing .introduction-text h1 {
+    font-size: 34px;
+    margin: 0 0 12px;
+}
+
+.landing .introduction-text h1 span {
+    color: var(--third-color);
+}
+
+.landing .introduction-text p {
+    line-height: 1.6;
+    font-size: 20px;
+    margin: 0;
+}
+/* End Landing */
