@@ -139,6 +139,114 @@ ul {
 /* End Component */
 
 /******************************************************************************************************/
+/* Start Setting-box */
+.Setting-box {
+    position: fixed;
+    left: -200px;
+    top: 0;
+    width: 200px;
+    background-color: var(--white-color);
+    min-height: 100vh;
+    z-index: 1000;
+    transition: var(--main-transition);
+}
+
+.Setting-box.open {
+    left: 0;
+}
+
+.Setting-box .toggle-settings {
+    position: absolute;
+    right: -30px;
+    top: 100px;
+    background-color: var(--white-color);
+    padding: 8px 0;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Setting-box .toggle-settings .gear {
+    font-size: 16px;
+}
+
+.Setting-box .settings-container .option-box {
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    background-color: #EEE;
+}
+
+.Setting-box .settings-container .option-box h4 {
+    margin: 0;
+    color: var(--fifth-color);
+    font-size: 14px;
+}
+
+.Setting-box .settings-container .option-box .colors-list {
+    text-align: center;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.Setting-box .option-box .colors-list li {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--fifth-color);
+    cursor: pointer;
+    border: 3px solid #EEE;
+}
+
+.Setting-box .option-box .colors-list li.active {
+    opacity: 1;
+    border-color: var(--white-color);
+}
+
+.Setting-box .option-box .colors-list li:first-child {
+    background-color: #f59e0b;
+}
+
+.Setting-box .option-box .colors-list li:nth-child(2) {
+    background-color: #E91E63;
+}
+
+.Setting-box .option-box .colors-list li:nth-child(3) {
+    background-color: #03A9F4;
+}
+
+.Setting-box .option-box .colors-list li:nth-child(4) {
+    background-color: #088178;
+}
+
+.Setting-box .option-box .colors-list li:nth-child(5) {
+    background-color: #222;
+}
+
+.Setting-box .random-background .yes,
+.Setting-box .random-background .no {
+    width: 50px;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 14px;
+    color: var(--white-color);
+    background-color: #009688;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.Setting-box .random-background span.active {
+    opacity: 1;
+}
+
+/* End Setting-box */
+
+/******************************************************************************************************/
 /* Start Landing */
 .landing {
     min-height: 100vh;
@@ -201,6 +309,8 @@ ul {
     transform: translate(-50%, -50%);
     z-index: 2;
     text-align: center;
+    max-width: 100%;
+    width: 100%;
 }
 
 .landing .introduction-text h1 {
@@ -210,6 +320,7 @@ ul {
 
 .landing .introduction-text h1 span {
     color: var(--third-color);
+    transition: var(--main-transition);
 }
 
 .landing .introduction-text p {
