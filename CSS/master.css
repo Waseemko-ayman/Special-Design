@@ -372,5 +372,57 @@ ul {
 
 /******************************************************************************************************/
 /* Start Our Skills */
+.our-skills {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: #EEE;
+    position: relative;
+}
 
+.our-skills h2 {
+    color: var(--third-color);
+    font-weight: bold;
+    font-size: 40px;
+    margin:  0 0 50px;
+    text-align: center;
+}
+
+.our-skills .skills {
+    flex: 1;
+}
+
+.our-skills .skills .skill {
+    padding-bottom: 20px;
+}
+
+.our-skills .skill h3 {
+    padding-bottom: 10px;
+    /* color: var(--third-color); */
+}
+
+.our-skills .skill h3 span {
+    color: var(--third-color);
+    border: 1px solid #D5D5D5;
+    border-radius: 4px;
+    padding: 3px 5px;
+    font-size: 12px;
+}
+
+.our-skills .skill .the-progrss {
+    height: 30px;
+    max-width: 100%;
+    width: 100%;
+    background-color: var(--white-color);
+    position: relative;
+}
+
+.our-skills .skill .the-progrss span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--third-color);
+    transition: width 0.5s linear;
+}
 /* End Our Skills */
