@@ -512,3 +512,121 @@ ul {
     background-color: var(--third-color);
 }
 /* End Our Gallery */
+
+/******************************************************************************************************/
+/* Start Timeline */
+.timeline {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--first-color);
+    position: relative;
+}
+
+.timeline .timeline-contant {
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline .timeline-contant::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--third-color);
+    left: 50%;
+    margin-left: -1px;
+    top: 0;
+}
+
+.timeline .timeline-contant .year {
+    margin: 20px auto;
+    width: 50px;
+    background-color: var(--third-color);
+    position: relative;
+    z-index: 2;
+    border-radius: 4px;
+    text-align: center;
+    color: var(--white-color);
+    padding: 2px 5px;
+    font-weight: bold;
+}
+
+.timeline .timeline-contant .left,
+.timeline .timeline-contant .right {
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline .timeline-contant .left {
+    float: left;
+}
+
+.timeline .timeline-contant .left::before {
+    right: -30px;
+}
+
+.timeline .timeline-contant .right {
+    float: right;
+}
+
+.timeline .timeline-contant .right::before {
+    left: -30px;
+}
+
+.timeline .timeline-contant .left::before,
+.timeline .timeline-contant .right::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    top: 20px;
+    background-color: var(--white-color);
+    border: 3px solid var(--third-color);
+}
+
+.timeline .timeline-contant .contant {
+    padding: 20px;
+    background-color: var(--white-color);
+    position: relative;
+}
+
+.timeline .timeline-contant .contant h3 {
+    color: var(--third-color);
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.timeline .timeline-contant .contant p {
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* علشان كل بوكس يكون بسطر لحاله Bootstrap كلاس زي الموجود بال*/
+.clearfix {
+    clear: both;
+}
+
+.timeline .timeline-contant .left .contant::before {
+    border-color: transparent transparent transparent var(--white-color);
+    right: -15px;
+}
+
+.timeline .timeline-contant .right .contant::before {
+    border-color: transparent var(--white-color) transparent transparent;
+    left: -15px;
+}
+
+.timeline .timeline-contant .left .contant::before,
+.timeline .timeline-contant .right .contant::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 8px;
+    top: 22px;
+    width: 0;
+    height: 0;
+}
+/* End Timeline */
