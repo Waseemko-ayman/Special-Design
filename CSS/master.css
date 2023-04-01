@@ -124,7 +124,7 @@ ul {
     justify-content: space-between;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 13px;
 }
 ::-webkit-scrollbar-track {
@@ -134,7 +134,7 @@ ul {
 ::-webkit-scrollbar-thumb {
     background-color: var(--first-color);
     border-radius: 10px;
-}
+} */
 
 /* End Component */
 
@@ -329,3 +329,48 @@ ul {
     margin: 0;
 }
 /* End Landing */
+
+/******************************************************************************************************/
+/* Start About Us */
+.about {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+
+.about .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .info-box {
+    flex: 1;
+    padding: 30px;
+}
+
+.about .info-box h2 {
+    color: var(--third-color);
+    font-weight: bold;
+    font-size: 40px;
+    margin:  0 0 10px;
+}
+
+.about .info-box p {
+    line-height: 1.8;
+    color: #767676;
+    margin: 0;
+    font-size: 17px;
+}
+
+.about .image-box img {
+    max-width: 100%;
+    width: 350px;
+    text-align: center;
+}
+/* End About Us */
+
+/******************************************************************************************************/
+/* Start Our Skills */
+
+/* End Our Skills */
