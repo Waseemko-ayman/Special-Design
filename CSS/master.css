@@ -1,6 +1,6 @@
 /* Start Variable */
 :root {
-    --first-color: #d3d5da;
+    --first-color: #EEE;
     --seconde-color: #465b52;
     --third-color: #f59e0b;
     --forth-color: #088178;
@@ -174,7 +174,7 @@ ul {
     padding: 10px;
     text-align: center;
     margin: 10px;
-    background-color: #EEE;
+    background-color: var(--first-color);
 }
 
 .Setting-box .settings-container .option-box h4 {
@@ -197,7 +197,7 @@ ul {
     border-radius: 50%;
     background-color: var(--fifth-color);
     cursor: pointer;
-    border: 3px solid #EEE;
+    border: 3px solid var(--first-color);
 }
 
 .Setting-box .option-box .colors-list li.active {
@@ -375,7 +375,7 @@ ul {
 .our-skills {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
-    background-color: #EEE;
+    background-color: var(--first-color);
     position: relative;
 }
 
@@ -426,3 +426,89 @@ ul {
     transition: width 0.5s linear;
 }
 /* End Our Skills */
+
+/******************************************************************************************************/
+/* Start Our Gallery */
+.gallery {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--first-color);
+    position: relative;
+}
+
+.gallery h2 {
+    color: var(--third-color);
+    font-weight: bold;
+    font-size: 40px;
+    margin:  0 0 50px;
+    text-align: center;
+}
+
+.gallery .images-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+}
+
+.gallery .images-box img {
+    max-width: 100%;
+    width: 200px;
+    padding: 3px;
+    background-color: var(--first-color);
+    border: 1px solid #ccc;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.popup-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.popup-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white-color);
+    padding: 20px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    z-index: 1001;
+}
+
+.popup-box img {
+    max-width: 100%;
+}
+
+.popup-box h2.title-popup {
+    text-align: center;
+    margin: 0 0 20px;
+    color: var(--third-color);
+    letter-spacing: 1;
+    font-weight: bold;
+}
+
+.popup-box .close-button {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--third-color);
+}
+/* End Our Gallery */
