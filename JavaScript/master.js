@@ -26,20 +26,20 @@ let backgroundInterval;
 let backgroundLocalItem = localStorage.getItem("background_option");
 
 if (backgroundLocalItem !== null) {
-    if (backgroundLocalItem === "true") {
-        backgroundOption = true;
-    } else {
-        backgroundOption = false;
-    }
 
     document.querySelectorAll(".random-background span").forEach(element => {
         element.classList.remove("active");
     });
 
     if (backgroundLocalItem === "true") {
+
+        backgroundOption = true;
         document.querySelector(".random-background .yes").classList.add("active");
+
     } else {
+        backgroundOption = false;
         document.querySelector(".random-background .no").classList.add("active");
+        
     }
 }
 
@@ -64,13 +64,8 @@ colorLi.forEach(li => {
         // Set Color On Local Storage
         localStorage.setItem("color-option", e.target.dataset.color);
 
-        // Remove Active Class From All Children
-        e.target.parentElement.querySelectorAll(".active").forEach(element => {
-            element.classList.remove("active");
-        });
-
-        // Add Active Class On Self
-        e.target.classList.add("active");
+        // Handle Active State
+        handleActive(e);
     });
 });
 
@@ -85,13 +80,9 @@ let datasetBackground = localStorage.getItem("color-option");
 randomBackEl.forEach(span => {
     // Click On Every Span
     span.addEventListener("click", (e) => {
-
-        // Remove Active Class From All Childrens
-        e.target.parentElement.querySelectorAll(".active").forEach(element => {
-            element.classList.remove("active");
-        });
-
-        e.target.classList.add("active");
+    
+        // Handle Active State
+        handleActive(e);
         
         if (e.target.dataset.background === "yes") {
             backgroundOption = true;
@@ -265,3 +256,59 @@ btnUp.onclick = function () {
         behavior: "smooth",
     });
 };
+
+"================================================================================="
+
+// Handle Active State
+
+function handleActive(ev) {
+    // Remove Active Class From All Children
+    ev.target.parentElement.querySelectorAll(".active").forEach(element => {
+        element.classList.remove("active");
+    });
+
+    // Add Active Class On Self
+    ev.target.classList.add("active");
+}
+
+"================================================================================="
+
+let bulletsSpan = document.querySelectorAll(".bullets-option span");
+
+let bulletsContainer = document.querySelector(".nav-bullets");
+
+let bulletsLocalItem = localStorage.getItem("bullets_option");
+
+if (bulletsLocalItem !== null) {
+    bulletsSpan.forEach(span => {
+
+        span.classList.remove("active");
+
+    });
+
+    if (bulletsLocalItem === "block") {
+        bulletsContainer.style.display = "block";
+        document.querySelector(".bullets-option .yes").classList.add("active");
+    } else {
+        bulletsContainer.style.display = "none";
+        document.querySelector(".bullets-option .no").classList.add("active");
+    }
+}
+
+
+bulletsSpan.forEach(span => {
+    span.addEventListener("click", (e) => {
+
+        if (span.dataset.display === "show") {
+            bulletsContainer.style.display = "block";
+            localStorage.setItem("bullets_option", "block");
+        } else {
+            bulletsContainer.style.display = "none";
+            localStorage.setItem("bullets_option", "none");
+        }
+
+        // Handle Active State
+        handleActive(e);
+    });
+});
+
