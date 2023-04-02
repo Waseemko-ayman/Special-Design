@@ -247,6 +247,64 @@ ul {
 /* End Setting-box */
 
 /******************************************************************************************************/
+/* Start Navigation Bullets */
+.nav-bullets {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 40px;
+}
+
+.nav-bullets .bullet {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid var(--third-color);
+    cursor: pointer;
+    margin: 20px auto;
+    position: relative;
+}
+
+.nav-bullets .bullet:hover .tooltip {
+    display: block;
+}
+
+.nav-bullets .bullet .tooltip {
+    background-color: var(--third-color);
+    width: 100px;
+    color: var(--white-color);
+    padding: 8px 10px;
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    cursor: default;
+    pointer-events: none;
+    display: none;
+}
+
+.nav-bullets .bullet .tooltip::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -16px;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent transparent var(--third-color);
+}
+
+
+
+
+/* End Navigation Bullets */
+
+/******************************************************************************************************/
 /* Start Landing */
 .landing {
     min-height: 100vh;
