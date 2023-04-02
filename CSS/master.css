@@ -149,6 +149,7 @@ ul {
     min-height: 100vh;
     z-index: 1000;
     transition: var(--main-transition);
+    border: 1px solid #EEE;
 }
 
 .Setting-box.open {
