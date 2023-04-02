@@ -849,6 +849,106 @@ ul {
 /* End Testimonials */
 
 /******************************************************************************************************/
-/* Start Testimonials */
+/* Start Conatct Us */
+.contact-us {
+    min-height: 600px;
+    background-image: url("../Images/contact.png");
+    background-size: cover;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
 
-/* End Testimonials */
+.contact-us .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-us .container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-us h2 {
+    color: var(--third-color);
+    font-weight: bold;
+    font-size: 40px;
+    margin:  0 0 60px;
+    text-align: center;
+}
+
+.contact-us form {
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    gap: 15px;
+}
+
+.contact-us form .left {
+    float: left;
+    width: 50%;
+}
+
+.contact-us form .right {
+    float: right;
+    width: 50%;
+}
+
+.contact-us form input:not([type="submit"]),
+.contact-us form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #CCC;
+    background-color: rgba(218, 218, 218, 0.40);
+}
+
+.contact-us form input {
+    height: 40px;
+}
+
+.contact-us form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contact-us form input:not([type="submit"]):focus,
+.contact-us form textarea:focus {
+    border: 1px solid var(--third-color);
+}
+
+.contact-us form input:not([type="submit"]):focus::-webkit-input-placeholder,
+.contact-us form textarea:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: var(--main-transition);
+}
+
+.contact-us form input:not([type="submit"]):focus::-ms-input-placeholder,
+.contact-us form textarea:focus::-ms-input-placeholder {
+    opacity: 0;
+    transition: var(--main-transition);
+}
+
+.contact-us form input:not([type="submit"]):focus::placeholder,
+.contact-us form textarea:focus::placeholder {
+    opacity: 0;
+    transition: var(--main-transition);
+}
+
+.contact-us form input[type="submit"] {
+    padding: 10px;
+    max-width: 100%;
+    width: 100%;
+    border-color: transparent;
+    background-color: var(--third-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+/* End Conatct Us */

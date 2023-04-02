@@ -326,3 +326,4 @@ document.querySelector(".reset-option").onclick = () => {
     window.location.reload();
 }
 
+"================================================================================="
