@@ -246,3 +246,22 @@ allBullets.forEach(bullet => {
 });
 
 "================================================================================="
+// Floating Action Button
+
+let btnUp = document.getElementById("up");
+
+window.onscroll = function () {
+    if (window.scrollY >= 600) {
+        btnUp.style.display = "block";
+    } else {
+        btnUp.style.display = "none";
+    }
+};
+
+btnUp.onclick = function () {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    });
+};
