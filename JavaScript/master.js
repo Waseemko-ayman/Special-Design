@@ -39,7 +39,7 @@ if (backgroundLocalItem !== null) {
     } else {
         backgroundOption = false;
         document.querySelector(".random-background .no").classList.add("active");
-        
+
     }
 }
 
@@ -311,4 +311,18 @@ bulletsSpan.forEach(span => {
         handleActive(e);
     });
 });
+
+"================================================================================="
+
+// Reset Button
+document.querySelector(".reset-option").onclick = () => {
+
+    // [1] => It will delete all things in Local Storage
+    localStorage.removeItem("color-option");
+    localStorage.removeItem("background_option");
+    localStorage.removeItem("bullets_option");
+
+    // [2] => It will reload the site
+    window.location.reload();
+}
 

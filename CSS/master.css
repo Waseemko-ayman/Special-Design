@@ -247,6 +247,19 @@ ul {
     opacity: 1;
 }
 
+.Setting-box .reset-option {
+    border: none;
+    width: 178px;
+    margin: 10px auto;
+    display: block;
+    color: var(--white-color);
+    background-color: #F44336;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 /* End Setting-box */
 
 /******************************************************************************************************/
