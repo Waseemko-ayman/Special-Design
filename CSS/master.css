@@ -323,6 +323,7 @@ ul {
     min-height: 100vh;
     background-image: url("../Images/landing\ \(1\).jpg");
     background-size: cover;
+    background-position: center;
     position: relative;
     transition: var(--main-transition);
 }
@@ -606,6 +607,13 @@ ul {
     border: 1px solid #CCC;
     border-radius: 5px;
     z-index: 1001;
+}
+
+@media (max-width: 767px) {
+    .popup-box {
+        max-width: 100%;
+        width: calc(100% - 40px);
+    }
 }
 
 .popup-box img {
@@ -1052,6 +1060,11 @@ ul {
 /* End Conatct Us */
 
 /******************************************************************************************************/
-/* Start Media Queries Breakpoints */
-
-/* End Media Queries Breakpoints */
+/* Start Footer */
+.footer {
+    text-align: center;
+    background-color: #333;
+    padding: 20px;
+    color: var(--white-color);
+}
+/* End Footer */

@@ -340,3 +340,34 @@ bar.addEventListener("click", () => {
 close.addEventListener("click", () => {
     linksList.classList.remove("active");
 });
+
+"================================================================================="
+
+// Form Contact Page
+
+let form = document.getElementById("contactUs");
+
+form.onsubmit = (e) => {
+    let username = document.getElementById("username").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("subject").value;
+    let txtAreaInp = document.getElementById("textarea").value;
+
+    let usernameRe = /^[a-z0-9_-\s]{3,16}$/ig;
+    let validationUserResult = usernameRe.test(username);
+
+    let phoneRe = /\d{3}-\d{3}-\d{4,}/; // 059-216-4680
+    let validationPhoneResult = phoneRe.test(phone);
+    
+    let emailRe = /^([a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})$/ig;
+    let validationEmailResult = emailRe.test(email);
+    
+    let subjectRe = /[^0-9@#$%^&*+=]/; 
+    let validationSubResult = subjectRe.test(subject);
+
+    if(validationUserResult == false || validationPhoneResult == false || validationEmailResult == false || validationSubResult == false || txtAreaInp == false) {
+        return false;
+    }
+    return true;
+}
