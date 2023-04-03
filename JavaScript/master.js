@@ -327,3 +327,16 @@ document.querySelector(".reset-option").onclick = () => {
 }
 
 "================================================================================="
+// Menu panel
+
+let linksList = document.querySelector(".links");
+let bar = document.getElementById("bar");
+let close = document.getElementById("close");
+
+bar.addEventListener("click", () => {
+    linksList.classList.add("active");
+});
+
+close.addEventListener("click", () => {
+    linksList.classList.remove("active");
+});
